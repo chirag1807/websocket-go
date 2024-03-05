@@ -1,0 +1,5 @@
+-- migrate:up
+CREATE TABLE users (ID SERIAL PRIMARY KEY, Name VARCHAR(20) NOT NULL, Bio VARCHAR(50) NOT NULL, Email VARCHAR(30) NOT NULL, Password VARCHAR(20) NOT NULL);
+
+-- migrate:down
+DROP TABLE IF EXISTS users;
